@@ -41,7 +41,8 @@ main {
 .popupContent,
 .paperContent,
 .introContent,
-.outContent {
+.outContent,
+.finalContent {
 	width: 40vw;
 	height: 20vw;
 	background-color: var(--dark-blue);
