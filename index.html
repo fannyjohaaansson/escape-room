@@ -18,7 +18,7 @@
 		<div id="popupIntro" class="modal hide">
 			<div class="introContent">
 				<h1>Hey!</h1>
-				<h4>HAHA, trapped you. Help me find my cylinder and i might give you your space piece back. The map will help you get started.
+				<h4>HAHA, trapped you. I forgot where i put my beer, find it and i might give you your space piece back. The map will help you get started.
 				</h4>			
 				<button class="popup-button" onclick="closeIntroPopup()">Close</button>
 				<p class="escInfo">(Press esc to be able to click)</p>
@@ -29,7 +29,7 @@
 		<div id="popupWindow" class="modal hide">
 			<div class="popupContent">
 				<h1>1/3</h1>
-				<h4>You have found my cylinder! Yay!</h4>
+				<h4>You have found my beer! Maybe you're more clever than i thought...</h4>
 				<button class="popup-button" onclick="closeFirstPopup()">Close</button>
 				<p class="escInfo">(Press esc to be able to click)</p>
 			</div>
@@ -57,8 +57,19 @@
 		<div id="finalClue" class="modal hide">
 			<div class="finalContent">
 				<h1>3/3</h1>
+				<img src="assets/gas-tank.png" class="gasTank"></img>
 				<h4> You found the missing piece, the fuel for your spaceship! Now get out of my forrest!! </h4>
 				<button class="popup-button" onclick="closeFinalPopup()">Next Level</button>
+				<p class="escInfo">(Press esc to be able to click)</p>
+			</div>
+		</div>
+
+		<!-- Error final clue -->
+		<div id="finalClueFalse" class="modal hide">
+			<div class="finalFalseContent">
+				<h1>Try again</h1>
+				<h4> Hey, don't skip ahead. You have to find the other pieces to open this one! </h4>
+				<button class="popup-button" onclick="closeFinalFalsePopup()">Close</button>
 				<p class="escInfo">(Press esc to be able to click)</p>
 			</div>
 		</div>
@@ -74,6 +85,7 @@
 				<img id="map" src="assets/map.png" />
 				<img id="concrete" src="assets/old-grunge-concrete.jpg" />
 				<img id="aliens" src="assets/aliens.jpg" />
+				<img id="beer" src="assets/beer-label.jpg" />
 
 				<!-- Furniture -->
 				<a-asset-item
@@ -84,7 +96,7 @@
 					id="wooden-table-mtl"
 					src="./wooden-coffe-table-obj/wooden-coffe-table.mtl"
 				></a-asset-item>
-				
+
 				<a-asset-item
 					id="shelf-obj"
 					src="./bookshelf-obj/bookshelf.obj"
@@ -245,11 +257,12 @@
 
 			<!-- Finding items -->
             <a-cylinder
+				src="#beer"
                 animation="property: color; to: #008000; easing: linear; startEvents: click;" dur: 2000"
                 id="cylinder"
-                position="-2.35 0.85 -1.9"
-                radius="0.03"
-                height="0.1"
+                position="-2.33 0.85 -1.9"
+                radius="0.06"
+                height="0.2"
                 color="#ffc65d"
 				open-popup
             ></a-cylinder> 
@@ -312,14 +325,14 @@
 			></a-plane>
 			<!-- Walls end -->
 
-			<!-- Alien -->
+			<!-- Alien photo-->
 			<a-plane
 			    src="#aliens"
 			    animation="property: position; from: -2.2 0.90 -1.8 ; to: -2.2 0.90 -1.5 ; easing: linear; startEvents: click;" dur: 3000"
 				position="-2.2 0.90 -1.8"
 				rotation="-10 70 0"
-				height="0.3"
-				width="0.3"
+				height="0.4"
+				width="0.4"
 				side="double"
 			></a-plane>
 
