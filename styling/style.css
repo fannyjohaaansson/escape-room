@@ -44,8 +44,8 @@ main {
 .outContent,
 .finalContent {
 	width: 40vw;
-	height: 20vw;
-	background-color: var(--dark-blue);
+	padding: 2rem;
+	background-color: var(--black-blue);
 	margin: auto;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	align-items: center;
@@ -53,4 +53,20 @@ main {
 	text-align: center;
 	font-family: 'Space Mono', monospace;
 	color: var(--light-gray);
+	border: 2px solid #d9d9d9;
+}
+
+.popup-button {
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	background-color: #d9d9d9;
+	font-family: 'Space Mono', monospace;
+	font-size: 1rem;
+	color: black;
+	border: none;
+	padding: 0.5rem;
+}
+
+.escInfo {
+	font-size: 0.7rem;
 }
